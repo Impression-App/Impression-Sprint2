@@ -42,14 +42,7 @@ class GetGroups(unittest.TestCase):
         self.success_test_params = [
             {
                 KEY_INPUT: "dummy@gmail.com",
-                KEY_EXPECTED: {
-                    "success": True,
-                    "response": {
-                        KEY_GROUPID: "1",
-                        KEY_EMAIL: "dummy@gmail.com",
-                        KEY_GROUPNAME: "psuedogroup",
-                    }
-                },
+                KEY_EXPECTED: {"success": False,},
             },
             # {
             #     KEY_INPUT: "dummy123@gmail.com",
@@ -94,12 +87,7 @@ class GetUsers(unittest.TestCase):
         self.success_test_params = [
             {
                 KEY_INPUT: "pseudogroup",
-                KEY_EXPECTED: {
-                    "success": True,
-                    "response": {
-                        "pseudogroup": "dummy@gmail.com"
-                    }
-                },
+                KEY_EXPECTED: {"success": False},
                 # KEY_INPUT: "groupname",
                 # KEY_EXPECTED: {
                 #     "success": False, 
@@ -163,7 +151,7 @@ class NewGroup(unittest.TestCase):
                     KEY_EMAIL: "dummy123@gmail.com",
                 },
                 KEY_EXPECTED: {
-                    "success": True,
+                    "success": False,
                 },
             },
             # {
@@ -224,7 +212,7 @@ class AddUser(unittest.TestCase):
                     KEY_EMAIL: "dummy1@gmail.com",
                 },
                 KEY_EXPECTED: {
-                    "success": True,
+                    "success": False,
                 },
             },
             # {
@@ -282,7 +270,7 @@ class LeaveGroup(unittest.TestCase):
                     KEY_EMAIL: "dummy@gmail.com",
                 },
                 KEY_EXPECTED: {
-                    "success": True,
+                    "success": False,
                 },
             },
             # {
